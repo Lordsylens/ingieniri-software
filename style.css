@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-:root{
-    --color-dark: hsl(252,30%,100%);
-    --color-light: hsl(252,30%,95%);
-    --color-grey: hsl(252,15%,65%);
-    --color-primary: hsl(252,75%,60%);
-    --color-secondary: hsl(252,100%,90%);
-    --color-success: hsl(120,95%,65%);
-    --color-danger: hsl(0,95%,65%);
-    --color-dark: hsl(252,30%,17%);
-    --color-black: hsl(252,30%,10%);
-
-    --border-radius:2rem;
-    --card-border-radius:1rem;
-    --btn-padding:0.6rem 2rem;
-    --search-padding:0.6rem 1rem;
+:root {
+    --color-dark: hsl(252, 30%, 100%);
+    --color-light: hsl(252, 30%, 95%);
+    --color-grey: hsl(252, 15%, 65%);
+    --color-primary: hsl(252, 75%, 60%);
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-black: hsl(252, 30%, 10%);
+    
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
     --card-padding: 1rem;
 }
 
-*,*::before,*::after{
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     outline: 0;
@@ -28,30 +28,32 @@
     border: none;
 }
 
-body{
-    font-family: "Poppins",sans-serif;
+body {
+    font-family: "Poppins", sans-serif;
     color: var(--color-dark);
     background: var(--color-light);
     overflow-x: hidden;
 }
 
-/* Estilos genarales*/
-.container{
+/* Estilos generales */
+.container {
     width: 80%;
     margin: 0 auto;
 }
-.foto-perfil{
+
+.foto-perfil {
     width: 2.7rem;
     aspect-ratio: 1/1;
-    border-radius:50%;
+    border-radius: 50%;
     overflow: hidden;
 }
-.img{
+
+.img {
     display: inline-block;
-    padding: var()
+    padding: var();
 }
 
-.btn{
+.btn {
     display: inline-block;
     padding: var(--btn-padding);
     font-weight: 500;
@@ -61,24 +63,25 @@ body{
     font-size: 0.9rem;
 }
 
-.btn:hover{
+.btn:hover {
     opacity: 0.8;
 }
-.btn-primary{
+
+.btn-primary {
     background: var(--color-primary);
     color: white;
 }
 
-.text-bold{
+.text-bold {
     font-weight: 500;
 }
 
-.text-muted{
+.text-muted {
     color: var(--color-grey);
 }
 
-/*barra de navegacion o busqueda*/
-nav{
+/* Barra de navegación o búsqueda */
+nav {
     width: 100%;
     background: var(--color-white);
     padding: 0.7rem 0;
@@ -87,19 +90,19 @@ nav{
     z-index: 10;
 }
 
-nav .container{
+nav .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-nav .search-bar{
+nav .search-bar {
     background: var(--color-light);
     border-radius: var(--border-radius);
     padding: var(--search-padding);
 }
 
-nav .search-bar input[type="search"]{
+nav .search-bar input[type="search"] {
     background: transparent;
     width: 30vw;
     margin-left: 1rem;
@@ -107,12 +110,146 @@ nav .search-bar input[type="search"]{
     color: var(--color-dark);
 }
 
-nav .search-bar[type="search"]::placeholder{
+nav .search-bar[type="search"]::placeholder {
     color: var(--colo --color-grey);
 }
 
-nav .create{
+nav .create {
     display: flex;
     align-items: center;
     gap: 2rem;
+}
+
+/* Estilos específicos para la página de Mensajes */
+#mensajes {
+    background-color: var(--color-light);
+    padding: 20px;
+}
+
+#mensajes h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--color-dark);
+}
+
+#mensajes ul {
+    list-style: none;
+    padding: 0;
+}
+
+#mensajes ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+#mensajes ul li strong {
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+#mensajes ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Estilos específicos para la página de Favoritos */
+#favoritos {
+    background-color: var(--color-light);
+    padding: 20px;
+}
+
+#favoritos h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--color-dark);
+}
+
+#favoritos ul {
+    list-style: none;
+    padding: 0;
+}
+
+#favoritos ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: var(--color-primary);
+}
+
+/* Estilos para la barra lateral izquierda */
+.sidebar {
+    background-color: #181f33; /* Fondo azul oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 20px;
+    width: 250px; /* Ancho de la barra lateral */
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%; /* Altura para que llene toda la altura de la pantalla */
+    overflow-y: auto; 
+}
+
+/* Estilos para los botones de la barra lateral izquierda */
+.sidebar .menu-item {
+    margin-bottom: 20px;
+    border-left: 4px solid transparent;
+    transition: border-left 0.3s ease;
+    cursor: pointer;
+}
+
+.sidebar .menu-item:hover {
+    border-left: 4px solid white;
+}
+
+.sidebar .menu-item span {
+    color: #3a86ff; /* Color azul más claro para los iconos */
+}
+
+.sidebar .menu-item h3 {
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+/* Estilos para la barra lateral de "Eventos" (derecha) */
+.sidebar-right {
+    background-color: #181f33; /* Fondo azul oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 20px;
+    width: 250px; /* Ancho de la barra lateral */
+    position: fixed;
+    right: 0; /* Coloca la barra a la derecha */
+    top: 0;
+    height: 100%; /* Altura para que llene toda la altura de la pantalla */
+    overflow-y: auto;
+}
+.sidebar-right {
+    background-color: #181f33; /* Fondo azul oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 20px;
+    width: 250px; /* Ancho de la barra lateral */
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1; /* Añade un índice z mayor para que se superponga a la barra izquierda */
+}
+
+/* Estilos para los botones de la barra lateral de "Eventos" (derecha) */
+.sidebar-right .menu-item {
+    margin-bottom: 20px;
+    border-left: 4px solid transparent;
+    transition: border-left 0.3s ease;
+    cursor: pointer;
+}
+
+.sidebar-right .menu-item:hover {
+    border-left: 4px solid white;
+}
+
+.sidebar-right .menu-item span {
+    color: #3a86ff; /* Color azul más claro para los iconos */
+}
+
+.sidebar-right .menu-item h3 {
+    font-size: 1.2rem;
+    margin-left: 10px;
 }

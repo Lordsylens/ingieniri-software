@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>STUDENT HUB - Sito web de sutedent hub </title>
-    <!--iconos CDN-->
+    <title>STUDENT HUB - Sitio web de Student Hub</title>
+    <!-- Iconos CDN -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <!--Link del css-->
+    <!-- Link del CSS personalizado -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <nav>
@@ -19,7 +18,7 @@
             </h2>
             <div class="search-bar">
                 <i class="uil uil-search"></i>
-                <input type-"search"> "buscar personas, post, proyectos"
+                <input type="search" placeholder="buscar personas, post, proyectos">
             </div>
             <div class="create">
                 <label class="btn btn-primary" for="crear-post">Crear</label>
@@ -31,7 +30,7 @@
     </nav>
     <main>
         <div class="container">
-            <!--izquierda-->
+            <!-- izquierda -->
             <div class="left">
                 <a class="perfil">
                     <div class="foto-perfil">
@@ -39,88 +38,133 @@
                     </div>
                     <div class="handle">
                         <h4>Jimena Sorto</h4>
-                        <p class="text-muted">
-                            @jimena
-                        </p>
+                        <p class="text-muted">@jimena</p>
                     </div>
                 </a>
-                <!--barra lateral-->
+                <!-- Barra lateral -->
                 <div class="sidebar">
-                     <a class="menu-item">
-                        <span><i class="uil uil-home"></i></span> <h3>Inicio</h3>
-                     </a>
-                        <a class="menu item active">
-                            <span><i class="uil uil-compass"></i></span><h3>explorar</h3>
-                        </a>
-                        <a class="menu-item">
-                            <span><i class="uil uil-bell"></i></span><h3>Notificaciones</h3>
-                            <div class="notificaciones-popup">
-                                <div class="perfil-foto1">
-                                    <img src="img/jimena.jpg">
-                                    <div class=".notificaciones-body">
-                                        <b>Jimena Sorto</b> ha aceptado tu solicitud de amistad
-                                        <small class ="text-muted">Hace 2 dias</small>
-                                         <div class="notificaciones-popup">
-                                <div class="perfil-foto2">
-                                    <img src="img/carlos.jpg">
-                                    <div class=".notificaciones-body">
-                                        <b>Carlos Paiz</b> ha aceptado tu solicitud de amistad
-                                        <small class ="text-muted">Hace 2 dias</small>
-
-                                        <div class="notificaciones-popup">
-                                            <div class="perfil-foto">
-                                                <img src="img/maria.jpg">
-                                                <div class=".notificaciones-body">
-                                                    <b>Maria Perla</b> ha aceptado tu solicitud de amistad
-                                                    <small class ="text-muted">Hace 2 dias</small>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a class="menu-item">
-                            <span><i class="uil uil-envelopes"></i></span><h3>Mensajes</h3>
-                        </a>
-
-                        <a class="menu-item">
-                            <span><i class="uil uil-bookmark-full"></i></span><h3>Favoritos</h3>
-                        </a>
-
-                        <a class="menu-item">
-                            <span><i class="uil uil-palette"></i></span><h3>temas</h3>
-                        </a>
-
-                        <a class="menu-item">
-                            <span><i class="uil uil-cog"></i></span><h3>Configuracion</h3>
-                        </a>
-
-                        <!-- iconos y texto del panel lateral 
-                        <span><i class="uil uil-compass"></i></span> <h3>explorar</h3>
-                        <span><i class="uil uil-bell"></i></span> <h3>Notificaciones</h3>
-                        <span><i class="uil uil-envelopes"></i></span> <h3>Mensajes</h3>
-                        <span><i class="uil uil-bookmark-full"></i></span> <h3>Favoritos</h3>
-                        <span><i class="uil uil-palette"></i></span> <h3>Temas</h3>
-                        <span><i class="uil uil-cog"></i></span> <h3>Configuracion</h3>
-                        <span><i class="uil uil-home"></i></span> <h3>????</h3>
-                        <span><i class="uil uil-home"></i></span> <h3>????</h3>
-                       -->
-
-                     </a>
+                    <a class="menu-item" data-section="inicio">
+                        <span><i class="uil uil-home"></i></span>
+                        <h3>Inicio</h3>
+                    </a>
+                    <a class="menu-item" data-section="mensajes">
+                        <span><i class="uil uil-envelopes"></i></span>
+                        <h3>Mensajes</h3>
+                    </a>
+                    <a class="menu-item" data-section="favoritos">
+                        <span><i class="uil uil-bookmark-full"></i></span>
+                        <h3>Favoritos</h3>
+                    </a>
+                    <a class="menu-item" data-section="temas">
+                        <span><i class="uil uil-palette"></i></span>
+                        <h3>Temas</h3>
+                    </a>
+                    <a class="menu-item" data-section="configuracion">
+                        <span><i class="uil uil-cog"></i></span>
+                        <h3>Configuración</h3>
+                    </a>
                 </div>
-             <!--medio-->
             </div>
+            <!-- medio -->
             <div class="middle">
-             <!--derecha-->
+                <!-- Contenido de las secciones -->
+                <div id="inicio" class="page">
+                    <h2>Inicio</h2>
+                    <div id="publicaciones">
+                        <!-- Las publicaciones se mostrarán aquí dinámicamente -->
+                    </div>
+                </div>
+                <div id="mensajes" class="page">
+                    <h2>Mensajes</h2>
+                    <ul>
+                        <li><strong>Usuario 1:</strong> ¡Hola! ¿Cómo estás?</li>
+                        <li><strong>Usuario 2:</strong> Bien, gracias. ¿Y tú?</li>
+                        <li><strong>Usuario 1:</strong> Estoy muy ocupado con mis proyectos.</li>
+                    </ul>
+                </div>
+                <div id="favoritos" class="page">
+                    <h2>Favoritos</h2>
+                    <!-- Agrega contenido de la página de Favoritos aquí -->
+                </div>
+                <div id="temas" class="page">
+                    <h2>Temas</h2>
+                    <!-- Agrega contenido de la página de Temas aquí -->
+                </div>
+                <div id="configuracion" class="page">
+                    <h2>Configuración</h2>
+                    <!-- Agrega contenido de la página de Configuración aquí -->
+                </div>
             </div>
+            <!-- derecha -->
             <div class="right">
-
+                <!-- Contenido de la columna derecha -->
             </div>
-
         </div>
     </main>
+    <script>
+        // Función para mostrar una sección y ocultar las demás
+        function mostrarSeccion(seccionId) {
+            const secciones = document.querySelectorAll('.page');
+            secciones.forEach(seccion => {
+                if (seccion.id === seccionId) {
+                    seccion.style.display = 'block';
+                } else {
+                    seccion.style.display = 'none';
+                }
+            });
+        }
+
+        // estos son los eventos de clic en los botones de la barra lateral
+        const menuItems = document.querySelectorAll('.menu-item');
+        menuItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const section = this.getAttribute('data-section');
+                mostrarSeccion(section);
+            });
+        });
+
+        // Mostrar la sección de "Inicio" por defecto al cargar la página
+        mostrarSeccion('inicio');
+
+        // Generar y mostrar publicaciones aleatorias en la sección de "Inicio"
+        const publicacionesContainer = document.getElementById('publicaciones');
+
+        function generarPublicacion(nombreUsuario, contenido, fotoPerfilSrc) {
+            const publicacionDiv = document.createElement('div');
+            publicacionDiv.classList.add('publicacion');
+
+            const fotoPerfilDiv = document.createElement('div');
+            fotoPerfilDiv.classList.add('foto-perfil');
+            const fotoPerfilImg = document.createElement('img');
+            fotoPerfilImg.src = fotoPerfilSrc;
+            fotoPerfilDiv.appendChild(fotoPerfilImg);
+
+            const contenidoDiv = document.createElement('div');
+            contenidoDiv.classList.add('contenido');
+            const nombreUsuarioDiv = document.createElement('div');
+            nombreUsuarioDiv.classList.add('nombre-usuario');
+            nombreUsuarioDiv.textContent = nombreUsuario;
+            const contenidoTextoDiv = document.createElement('div');
+            contenidoTextoDiv.textContent = contenido;
+
+            contenidoDiv.appendChild(nombreUsuarioDiv);
+            contenidoDiv.appendChild(contenidoTextoDiv);
+
+            publicacionDiv.appendChild(fotoPerfilDiv);
+            publicacionDiv.appendChild(contenidoDiv);
+
+            return publicacionDiv;
+        }
+
+        // apartado de fotos de perfil
+        const publicacion1 = generarPublicacion('Usuario 1', '¡Hola a todos!', 'img/jimena.jpg');
+        const publicacion2 = generarPublicacion('Usuario 2', 'Hoy es un gran día.', 'img/carlos.jpg');
+        const publicacion3 = generarPublicacion('Usuario 3', 'Miren esta foto que tome en el campus de la universiidasd.', 'img/maria.jpg');
+
+        // Agregar las publicaciones al contenedor
+        publicacionesContainer.appendChild(publicacion1);
+        publicacionesContainer.appendChild(publicacion2);
+        publicacionesContainer.appendChild(publicacion3);
+    </script>
 </body>
 </html>
